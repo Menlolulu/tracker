@@ -4,7 +4,7 @@ Rubiks Cube times have the following data:
 - Date (str)
 - Location (str)
 - Event (str)
-- Round (str)
+- Round (int)
 - Rank (int)
 - Best (float)
 - Average (float)
