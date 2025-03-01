@@ -1,5 +1,5 @@
 from CubeSolve import CubeSolve
-
+from SwimTime import SwimTime
 ucberkeley = CubeSolve()
 print(ucberkeley.event)
 print(ucberkeley.average)
@@ -14,3 +14,12 @@ crystalsprings.location = "Crystal Springs"
 print(crystalsprings.event)
 print(crystalsprings.average)
 print(crystalsprings.location)
+
+Gunnhigh = SwimTime()
+print(Gunnhigh.location)
+print(Gunnhigh.date)
+print(Gunnhigh.stroke)
+print(Gunnhigh.length)
+print(Gunnhigh.time)
+print(Gunnhigh.rank)
+print(Gunnhigh.note)
