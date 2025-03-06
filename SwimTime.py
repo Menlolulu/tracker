@@ -3,7 +3,7 @@
 #3 tell mom done then message
 
 class SwimTime:
-    def _init_(self):
+    def __init__(self):
         self.location = "Henrey Gunn High School"
         self.date = "11/23/24"
         self.stroke = "Butterfly"
