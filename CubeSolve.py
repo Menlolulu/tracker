@@ -1,4 +1,4 @@
-
+import json
 
 class CubeSolve:
     def __init__(self):
@@ -7,7 +7,7 @@ class CubeSolve:
         self.event = "3x3x3"
         self.round = 1
         self.rank = 147 
-        self.solves = [ 58.28, 67.98, 85.89, 64.83, 49.96 ]
+        self.solves = [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
     
     def best(self):
         return min(self.solves)
@@ -18,3 +18,35 @@ class CubeSolve:
         middles.remove(max(self.solves))
 
         return sum(middles) / 3
+    
+    def to_json(self):
+        data =  {
+            "date": self.date,
+            "location": self.location,
+            "event": self.event, 
+            "round": self.round,
+            "rank": self.rank,
+            "five_solves": self.solves 
+        }
+
+        data = json.dumps(data)
+        return data
+    
+    def from_json(self, data):
+        data = json.loads(data)
+
+        self.date = data["date"]
+        self.location = data["location"]
+        self.event = data["event"]
+        self.round = data["round"]
+        self.rank = data["rank"]
+        self.solves = data["five_solves"]
+    
+    def from_dict(self, data):
+        self.date = data["date"]
+        self.location = data["location"]
+        self.event = data["event"]
+        self.round = data["round"]
+        self.rank = data["rank"]
+        self.solves = data["five_solves"]
+#later

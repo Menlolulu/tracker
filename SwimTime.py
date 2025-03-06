@@ -1,6 +1,4 @@
-#1 creat the entire class add properyes
-#2 publish to github
-#3 tell mom done then message
+import json
 
 class SwimTime:
     def __init__(self):
@@ -11,3 +9,36 @@ class SwimTime:
         self.time = 190
         self.rank = 1/2
         self.note = "almost got DQed two hand touch"
+
+    def to_json(self):
+        data = {
+            "date": self.date,
+            "location": self.location,
+            "stroke": self.stroke,
+            "length": self.length,
+            "time": self.time,
+            "rank": self.rank,
+            "notes": self.note
+        }
+        data = json.dumps(data)
+        return data
+    
+    def from_json(self, data):
+        data = json.loads(data)
+
+        self.date = data["date"]
+        self.location = data["location"]
+        self.stroke = data["stroke"]
+        self.length = data["length"]
+        self.time = data["time"]
+        self.rank = data["rank"]
+        self.note = data["notes"]
+        
+    def from_dict(self, data):
+        self.date = data["date"]
+        self.location = data["location"]
+        self.stroke = data["stroke"]
+        self.length = data["length"]
+        self.time = data["time"]
+        self.rank = data["rank"]
+        self.note = data["notes"]

@@ -1,0 +1,43 @@
+{
+    "cube_solves": [
+        {
+            "date": "11/3/24",
+            "location": "UC Berkeley",
+            "event": "3x3 Cube",
+            "round": 1,
+            "rank": 147,
+            "five_solves": [
+                58.28,
+                67.98,
+                85.89,
+                64.83,
+                49.96
+            ]
+        },
+        {
+            "date": "11/3/24",
+            "location": "UC Berkeley",
+            "event": "2x2 Cube",
+            "round": 1,
+            "rank": 111,
+            "five_solves": [
+                11.57,
+                12.10,
+                10.67,
+                10.45,
+                13.97
+            ]
+        }
+    ],
+    "swim_meets": [
+        {
+            "date": "asdfdasfdasf",
+            "location": "asdfdasfdasdf",
+            "stroke": "a;lksdjfl;kajf",
+            "length": 1343,
+            "time": 23.23,
+            "rank": "1/8,342,342,342",
+            "notes": "idk idk idk idk idk idk idk idk"
+        }
+    ]
+}

@@ -1,31 +1,24 @@
+# Homework: put all swim meets and cube solves from the excel sheets into the JSON
+
 from CubeSolve import CubeSolve
 from SwimTime import SwimTime
-ucberkeley = CubeSolve()
+import json
 
-print("--- UC Berkeley --")
+savedata = json.load(open("savedata.json"))
+ucberkeley = savedata["cube_solves"][1]
 
-print(ucberkeley.event)
-print(ucberkeley.average())
-print(ucberkeley.location)
+solve = CubeSolve()
+solve.from_dict(ucberkeley)
 
-print("--- Crystal Springs ---")
+print(solve.average())
 
-crystalsprings = CubeSolve()
+# print("--- Gunn High ---")
 
-crystalsprings.event = "3x3x3"
-crystalsprings.location = "Crystal Springs"
-
-print(crystalsprings.event)
-print(crystalsprings.best())
-print(crystalsprings.location)
-
-print("--- Gunn High ---")
-
-Gunnhigh = SwimTime()
-print(Gunnhigh.location)
-print(Gunnhigh.date)
-print(Gunnhigh.stroke)
-print(Gunnhigh.length)
-print(Gunnhigh.time)
-print(Gunnhigh.rank)
-print(Gunnhigh.note)
+# Gunnhigh = SwimTime()
+# print(Gunnhigh.location)
+# print(Gunnhigh.date)
+# print(Gunnhigh.stroke)
+# print(Gunnhigh.length)
+# print(Gunnhigh.time)
+# print(Gunnhigh.rank)
+# print(Gunnhigh.note)
