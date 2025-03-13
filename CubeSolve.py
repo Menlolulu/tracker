@@ -9,6 +9,12 @@ class CubeSolve:
         self.rank = 147 
         self.solves = [ 0.0, 0.0, 0.0, 0.0, 0.0 ]
     
+    def __repr__(self):
+        if self.best() < 1:
+            return f"I went to {self.location} on {self.date} and did a {self.event} solve. In round {self.round}, I got a rank #{self.rank}. My best time was less than a second {self.best()} and my average was {self.average()} seconds."
+        else:
+            return f"I went to {self.location} on {self.date} and did a {self.event} solve. In round {self.round}, I got a rank #{self.rank}. My best time was {self.best()} and my average was {self.average()} seconds."
+
     def best(self):
         return min(self.solves)
     
@@ -49,4 +55,4 @@ class CubeSolve:
         self.round = data["round"]
         self.rank = data["rank"]
         self.solves = data["five_solves"]
-#later
+    

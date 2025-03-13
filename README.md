@@ -8,7 +8,7 @@ Rubiks Cube times have the following data:
 - Rank (int)
 - Best (float)
 - Average (float)
-- Five Solves (list of five floats)
+- Five Solves (list of five floats) 
 
 Swim meet times have the following data:
 - Date (str)
