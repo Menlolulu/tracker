@@ -9,6 +9,9 @@ class SwimTime:
         self.time = 190
         self.rank = 1/2
         self.note = "almost got DQed two hand touch"
+    def __repr__(self):
+       return f"I went to {self.location} on {self.date} and did {self.stroke} {self.length} meter\yard, and got a time of {self.time} with a rank of {self.rank} my thoughts are {self.note}. " 
+    
 
     def to_json(self):
         data = {
