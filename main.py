@@ -41,9 +41,9 @@ def create_swim_time():
     date = input(" What is the date of the swim meet? ")
     location = input(" What is the location of the meet ")
     stroke = input(" What is the stroke? ")
-    length = input(" what is the length of the event")
-    time = input(" What is the time it took for you to finishe ")
-    rank = input(" What is the rank of the event")
+    length = int(input(" what is the length of the event"))
+    time = int(input(" What is the time it took for you to finishe "))
+    rank = int(input(" What is the rank of the event"))
     note = input(" What notes or idea you have about the event")
 
     swim_time = SwimTime 
